@@ -1,0 +1,44 @@
+<form action="{{url_for('late')}}" method="POST">
+
+    Emp_ID = <input type="text" name="emp_id"><br>
+    UserName = <input type="text" name="username"><br>
+    dinner = <input type="text" name="dinner"><br>
+    refreshment = <input type="text" name="refreshment"><br>
+
+
+
+    <button type="submit" name="Create">Create</button>
+    <button type="submit" name="Update">Update</button>
+    <button type="submit" name="Delete">Delete</button>
+    <button type="submit" name="Truncate">Truncate</button>
+    
+    
+    
+
+
+</form>
+<h3>Table Data</h3>
+<table border="2">
+    <thead>
+        <th>Emp_ID</th>
+        <th>UserName</th>
+        <th>Dinner</th>
+        <th>Refreshment</th>
+
+    </thead>
+    {% for element in datafield %}
+    <tbody>
+        <td>{{element.emp_id}}</td>
+        <td>{{element.username}}</td>
+        <td>{{element.dinner}}</td>
+        <td>{{element.refreshment}}</td>
+    </tbody>
+    {% endfor %}
+    
+
+</table>
+
+<br>
+<br>
+<br>
+<br>
