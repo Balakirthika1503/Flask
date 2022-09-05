@@ -1,0 +1,19 @@
+from flask_wtf import FlaskForm
+from wtforms import StringField,SubmitField,IntegerField
+
+class Addform(FlaskForm):
+    name=StringField('Enter the puppy name')
+    submit=SubmitField('Add puppy')
+
+class Delform(FlaskForm):
+    id=IntegerField('Enter the puppy id to remove the name')
+    submit=SubmitField('Delete puppy')
+
+class Addowner(FlaskForm):
+    pup_id=IntegerField('Enter the puppy id')
+    name=StringField('Enter the owner name')
+    submit=SubmitField('Add owner')
+    
+
+
+
